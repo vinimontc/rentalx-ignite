@@ -46,9 +46,7 @@ describe("List Categories", () => {
         Authorization: `Bearer ${token}`,
       });
 
-    const responseGet = await request(app).get("/categories");
-
-    console.log(responseGet.body);
+    const responseGet = await request(app).get("/categories/");
 
     expect(responsePost.status).toBe(201);
     expect(responseGet.status).toBe(200);
